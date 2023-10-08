@@ -1,0 +1,257 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+html {
+  font-size: calc(1.01vw + 1.43vh);
+}
+body {
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: black;
+  color: white;
+}
+.Parallax {
+  --p: 120;
+  height: 100vh;
+  overflow: auto;
+  -webkit-perspective: calc(var(--p) * 1px);
+          perspective: calc(var(--p) * 1px);
+  -webkit-perspective-origin-x: 100%;
+}
+.Parallax_Scroll {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  will-change: transform;
+}
+.Parallax_Preserve {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.Parallax_Layer {
+  --t: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform-origin-x: 100%;
+  -webkit-transform: translateZ(calc(var(--t) * 1px)) scale(calc(1 + (var(--t) * -1) / var(--p)));
+          transform: translateZ(calc(var(--t) * 1px)) scale(calc(1 + (var(--t) * -1) / var(--p)));
+}
+.Parallax_Layer>img{
+  width:100vw;
+  height:75vw;
+}
+.Scene {
+  position: relative;
+  min-height: 100vh;
+  padding: 5vw;
+}
+p, ul {
+  margin-top: 0;
+  margin-bottom: 5vw;
+}
+p {
+  text-align: justify;
+}
+h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  margin-bottom: 2.5vw;
+  font-size: max(1.6rem, 4vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+.Svg {
+  display: block;
+}
+.Positioner {
+  position: absolute;
+}
+#s-mars-surface > g, #s-mars-shadow,
+#s-orbiter-spacecraft {
+  will-change: transform;
+}
+.Title_m,.below_m, .Lead{
+  position: absolute;
+  margin: 0;
+  text-align: initial;
+}
+.below_m{
+  text-shadow: 2px 2px #c53445 ;
+  color:#300361;
+  font-size:1.2rem;
+  text-transform: uppercase;
+  top:13vw;
+}
+.Title_m {
+  text-shadow: 2px 2px  #c53445;
+  top: 6vw;
+  left: 5vw;
+  margin-right: 12rem;
+  color:#300361 ;
+  font-size: 3.375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.Title_mo,.below_mo, .Lead{
+  position: absolute;
+  margin: 0;
+  text-align: initial;
+}
+.below_mo{
+  text-shadow: 2px 2px 	#C0C0C0;
+  color:#300361;
+  font-size:1.2rem;
+  text-transform: uppercase;
+  top:13vw;
+}
+.Title_mo {
+  text-shadow: 2px 2px	#C0C0C0;
+  top: 6vw;
+  left: 5vw;
+  margin-right: 12rem;
+  color: #300361;
+  font-size: 3.375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.Title_j,.below_j, .Lead{
+  position: absolute;
+  margin: 0;
+  text-align: initial;
+}
+.below_j{
+  text-shadow: 2px 2px #ffffad;
+  color: #300361;
+  font-size:1.2rem;
+  text-transform: uppercase;
+  top:13vw;
+}
+.Title_j {
+  text-shadow: 2px 2px #ffffad;
+  top: 6vw;
+  left: 5vw;
+  margin-right: 12rem;
+  color:  #300361;
+  font-size: 3.375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.Title_s,.below_s, .Lead{
+  position: absolute;
+  margin: 0;
+  text-align: initial;
+}
+.below_s{
+  text-shadow: 2px 2px #C4A484;
+  color:#300361;
+  font-size:1.2rem;
+  text-transform: uppercase;
+  top:13vw;
+}
+.Title_s {
+  text-shadow: 2px 2px #C4A484;
+  top: 6vw;
+  left: 5vw;
+  margin-right: 12rem;
+  color:  #300361 ;
+  font-size: 3.375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.Lead {
+  left: 5vw;
+  top:22.5vw;
+  font-size: 1.3rem;
+  font-weight: 300;
+  width: 40vw;
+}
+.Positioner-mars {
+  left: 67vw;
+  top: 66vh;
+  width:  calc(61vh + (100vmax - 100vh) * 0.3);
+  height: calc(61vh + (100vmax - 100vh) * 0.3);
+  transform: translate(-50%, -50%);
+}
+.Parallax_Layer-orbiter {
+  animation: Parallax_Layer-orbiter 50s linear infinite;
+}
+@keyframes Parallax_Layer-orbiter {
+  0%   { transform: translateZ(30px) scale(calc(1 + -30 / 120)); }
+
+  15%  { transform: translateZ(50px) scale(calc(1 + -50 / 120)); }
+  35%  { transform: translateZ(50px) scale(calc(1 + -50 / 120)); }
+
+  50%  { transform: translateZ(30px) scale(calc(1 + -30 / 120)); }
+
+  65%  { transform: translateZ(10px) scale(calc(1 + -10 / 120)); }
+  85%  { transform: translateZ(10px) scale(calc(1 + -10 / 120)); }
+
+  100% { transform: translateZ(30px) scale(calc(1 + -30 / 120)); }
+}
+.Positioner-orbiter {
+  left: 67vw;
+  top: 66vh;
+  width:  calc(61vh + (100vmax - 100vh) * 0.3);
+  height: calc(61vh + (100vmax - 100vh) * 0.3);
+  transform: translate(-50%, -50%);
+  transform-origin: 150%;
+  animation: Positioner-orbiter 8s cubic-bezier(0, 0.2, 0, 1) forwards;
+}
+@keyframes Positioner-orbiter {
+  0% {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+.Scene-2 {
+  background-color: #300361;
+}
+.Scene-2 > p:last-child {
+  margin-bottom: 0;
+}
+.Svg-trajectory {
+  max-width: 85vh;
+  margin: auto;
+  margin-top: -1.5vw;
+  margin-bottom: 5vw;
+}
+
+#s-trajectory-earth, #s-trajectory-earthSurface,
+#s-trajectory-mars, #s-trajectory-marsSurface,
+#s-trajectory-spacecraft {
+  will-change: transform;
+}
+.Scene-3 {
+  height: 150vh;
+}
+.Scene-4 {
+  background-color: #300361;
+}
+.Scene-6 {
+  display: grid;
+  align-content: center;
+  background-color: #000328;
+}
+.Scene-6{
+  position: relative;
+  min-height: 50vh;
+  padding: 5vw;
+}
+.Scene-2, .Scene-4, .Scene-6 {
+  opacity: 0.9999999; 
+}
