@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+      
+  <!-- Our custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <title>Space Tourism</title>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+
+</head>
+
+<body class="crew">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+    <div>
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav> 
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html">Home</a>
+        <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html">Services</a>
+        <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html">Crew</a>
+        <li ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html">Faqs</a>
+    </ul>
+    </nav>
+  </header>
+  
+  <main id="main" class="grid-container grid-container--crew flow">
+    
+    <div class="dot-indicators flex" role="tablist" aria-label="crew member list">
+      <button aria-selected="true" aria-controls="commander-tab" role="tab" data-image="Shradha" tabindex="0"><span class="sr-only">Chief Astronomer</span></button>
+      <button aria-selected="false" aria-controls="mission-tab" role="tab" data-image="Harshitha" tabindex="-1"><span class="sr-only">Technology Architect</span></button>
+      <button aria-selected="false" aria-controls="pilot-tab" role="tab" data-image="Ritika" tabindex="-1"><span class="sr-only">Chief Spacecraft Engineer</span></button>
+      <button aria-selected="false" aria-controls="crew-tab" role="tab" data-image="Srija" tabindex="-1"><span class="sr-only">Space Travel Navigator</span></button>
+      
+      <button aria-selected="false" aria-controls="new-tab" role="tab" data-image="Varshitha" tabindex="-1"><span class="sr-only">Cosmic Communications Officer</span></button>
+      <button aria-selected="false" aria-controls="old-tab" role="tab" data-image="pranasri" tabindex="-1"><span class="sr-only">Astro-Logistics Manager</span></button>
+    </div>
+    
+    <!-- commander -->
+    <article class="crew-details flow" id="commander-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Chief Astronomer</h2>
+        <p class="fs-700 uppercase ff-serif">Shradha</p>
+      </header>
+      <p class="fs-350">As our Chief Astronomer, Shradha brings a wealth of knowledge and expertise in astronomy to our team. With a passion for unraveling the mysteries of the universe.</p>
+    </article> 
+    
+    <!-- mission specialist -->
+    <article hidden class="crew-details flow" id="mission-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Technology Architect</h2>
+        <p class="fs-700 uppercase ff-serif">Harshitha</p>
+      </header>
+      <p class="fs-350">Harshitha serves as our Technology Architect, shaping the technological backbone of our space tourism operations. With a sharp focus on innovation and cutting-edge solutions.</p>
+    </article> 
+    
+    <!-- pilot -->
+    <article hidden class="crew-details flow" id="pilot-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Chief Spacecraft Engineer</h2>
+        <p class="fs-700 uppercase ff-serif">Ritika</p>
+      </header>
+      <p class="fs-350"> Ritika specializes in spacecraft engineering, ensuring the safety and reliability of our vehicles for your cosmic journeys. </p>
+    </article> 
+    
+    <!-- engineer -->
+    <article hidden class="crew-details flow" id="crew-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Space Travel Navigator</h2>
+        <p class="fs-700 uppercase ff-serif">Srija</p>
+      </header>
+      <p class="fs-350">Srija's role is to chart the course for our space voyages, making sure every trip is a seamless and extraordinary experience.</p>
+    </article> 
+
+    <article hidden class="crew-details flow" id="new-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Cosmic Communications Officer</h2>
+        <p class="fs-700 uppercase ff-serif">Varshitha</p>
+      </header>
+      <p class="fs-350">Varshitha is responsible for maintaining communication with our space travelers, ensuring they stay connected with Earth and their fellow adventurers. </p>
+    </article>
+
+    <article hidden class="crew-details flow" id="old-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Astro-Logistics Manager</h2>
+        <p class="fs-700 uppercase ff-serif">Pranasri</p>
+      </header>
+      <p class="fs-350">Pranasri manages the intricate logistics of space travel, from launch preparations to ensuring passengers' comfort and safety in space.</p>
+    </article>
+    
+    
+    <picture id="Shradha">
+      <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+    </picture>
+    <picture hidden id="Harshitha">
+      <img src="assets/crew/image-mark-shuttleworth.png" alt="Douglas Hurley">
+    </picture>
+    <picture hidden id="Ritika">
+      <img src="assets/crew/image-victor-glover.png" alt="Douglas Hurley">
+    </picture>
+    <picture hidden id="Srija">
+      <img src="assets/crew/srija.png" alt="Douglas Hurley" height="500px">
+    </picture>
+    <picture hidden id="Varshitha">
+      <img src="assets/crew/varshitha.png" alt="Douglas Hurley" height="500px">
+    </picture>
+    <picture hidden id="pranasri">
+      <img src="assets/crew/pranasri.png" alt="Douglas Hurley" height="500px">
+    </picture>
+  </main>
+</body>
+</html>
